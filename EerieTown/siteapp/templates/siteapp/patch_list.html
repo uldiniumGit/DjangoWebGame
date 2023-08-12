@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        {% include 'siteapp/include_files/head.html' %}
+    </head>
+    <body>
+        {% include 'siteapp/include_files/navigation.html' %}
+        <br>
+        <br>
+        Список патчей
+        <br>
+        <br>
+        <ul>
+            {% for item in object_list %}
+                <li>
+                    {{item.name}}
+                    <br>
+                    {{item.description}}
+                    <br>
+                    {{item.date}}
+                    <br>
+                    <hr>
+                </li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
