@@ -4,6 +4,6 @@ from siteapp import views
 app_name = 'siteapp'
 
 urlpatterns = [
-    path('', views.main_view, name='index'),
-    path('patchnotes/', views.patchnotes, name='patchnotes'),
+    path('', views.MainView.as_view(), name='index'),
+    path('patches', views.PatchesListView.as_view(), name='patch_list')
 ]

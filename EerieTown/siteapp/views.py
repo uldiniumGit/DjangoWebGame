@@ -1,13 +1,15 @@
-from django.shortcuts import render
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, ListView
 from .models import PatchNote
 # Create your views here.
 
 
-def main_view(request):
-    return render(request, 'siteapp/index.html', context={})
+class MainView(TemplateView):
+    template_name = 'siteapp/index.html'
 
 
-def patchnotes(request):
-    patchnotes = PatchNote.objects.order_by('-id')
-    return render(request, 'siteapp/patchnotes.html', context={'patchnotes': patchnotes})
+class PatchesListView(ListView):
+    model = PatchNote
+    template_name = 'siteapp/patch_list.html'
+
+    def get_queryset(self):
+        return super(PatchesListView, self).get_queryset().order_by('-id')
