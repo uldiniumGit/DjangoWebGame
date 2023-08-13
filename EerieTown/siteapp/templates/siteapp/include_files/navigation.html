@@ -2,5 +2,8 @@
 <div class="blue_navbar">
   <a href="{% url 'siteapp:index' %}">.....Home.....</a>
   <a href="{% url 'siteapp:patch_list' %}">.....патчи.....</a>
-  <a href="{% url 'siteapp:patch_list' %}">.....патчи.....</a>
+  <a href="{% url 'siteapp:login' %}">.....Логин.....</a>
+  <a href="{% url 'siteapp:logout' %}">.....Выход.....</a>
+  <a href="{% url 'siteapp:registration' %}">.....Регистрация.....</a>
+  <a href="">{{user.username}}</a>
 </div>

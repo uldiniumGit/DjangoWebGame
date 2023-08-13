@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'siteapp',
-    'gameapp',
 ]
 
 MIDDLEWARE = [
@@ -125,3 +124,13 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Переназначение модели пользователя
+AUTH_USER_MODEL = 'siteapp.GameUser'
+# Переходы
+# после логина
+LOGIN_REDIRECT_URL = '/'
+# после выхода
+LOGOUT_REDIRECT_URL = '/'
+# на логин
+LOGIN_URL = '/login'
