@@ -1,4 +1,16 @@
-.blue_navbar {
-  background-color: lightblue;
-  font-size: 2rem;
+
+.childStones {
+  position: absolute;
+  top: 440px;
+  left: 1010px;
+}
+.parentMap {
+
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+}
+.whiteText{
+  color: white;
 }

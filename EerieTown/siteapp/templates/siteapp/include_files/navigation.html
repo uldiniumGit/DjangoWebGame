@@ -1,9 +1,14 @@
 {% load static %}
-<div class="blue_navbar">
-  <a href="{% url 'siteapp:index' %}">.....Home.....</a>
-  <a href="{% url 'siteapp:patch_list' %}">.....патчи.....</a>
-  <a href="{% url 'siteapp:login' %}">.....Логин.....</a>
-  <a href="{% url 'siteapp:logout' %}">.....Выход.....</a>
-  <a href="{% url 'siteapp:registration' %}">.....Регистрация.....</a>
-  <a href="">{{user.username}}</a>
+
+
+<div class="widget">
+  <ul class="widget-list">
+    <li><a href="{% url 'siteapp:index' %}">Home</a></li>
+    <li><a href="{% url 'siteapp:patch_list' %}">патчи</a></li>
+    <li><a href="{% url 'siteapp:login' %}">Логин</a></li>
+    <li><a href="{% url 'siteapp:logout' %}">Выход</a></li>
+    <li><a href="{% url 'siteapp:registration' %}">Регистрация</a></li>
+    <li><a href="{% url 'siteapp:registration' %}">Ключ</a></li>
+    <li><a href="">{{user.username}}</a></li>
+  </ul>
 </div>

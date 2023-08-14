@@ -6,23 +6,31 @@
     </head>
     <body>
         {% include 'siteapp/include_files/navigation.html' %}
+        <div class="parentMap">
+            <img src="/media/stonesInside.png" alt="..." >
+        </div>
         <br>
         <br>
-        Список патчей
+        <div class="whiteText">
+            Список патчей
+        </div>
         <br>
         <br>
-        <ul>
-            {% for item in object_list %}
-                <li>
-                    {{item.name}}
-                    <br>
-                    {{item.description}}
-                    <br>
-                    {{item.date}}
-                    <br>
-                    <hr>
-                </li>
-            {% endfor %}
-        </ul>
+        <div class="whiteText">
+            <ul>
+                {% for item in object_list %}
+                    <li>
+                        {{item.name}}
+                        <br>
+                        {{item.description}}
+                        <br>
+                        {{item.date}}
+                        <br>
+                        <br>
+                        <br>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
     </body>
 </html>
