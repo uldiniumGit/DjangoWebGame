@@ -5,17 +5,52 @@
         {% include 'siteapp/include_files/head.html' %}
     </head>
     <body>
-        {% include 'siteapp/include_files/navigation.html' %}
-        <h1>Hello</h1>
-        <br>
-        <br>
+
         <div class="parentMap">
             <img src="/media/MapWFramelarge.png" alt="..." style="width: 100vw; height: 49.72vw; display: block; " >
             <div class="childStones">
                 <a href="{% url 'siteapp:patch_list' %}">
                     <img class="img1" src="/media/stone.png" alt="" style="width: 8.9vw; height: 6.85vw;"/>
                 </a>
+
+            <! -- карта -->
+            <img src="/media/MapWFramelarge.png" alt="..." style="width: 100vw; height: 56.25vw; display: block; ">
+
+            <! -- меню -->
+            <div class="childLogin">
+                <a class="childText" href="{% url 'siteapp:login' %}">ВХОД</a>
             </div>
+            <div class="childLogout">
+                <a class="childText" href="{% url 'siteapp:logout' %}">ВЫХОД</a>
+            </div>
+            <div class="childRegistration">
+                <a class="childText" href="{% url 'siteapp:registration' %}">РЕГИСТРАЦИЯ</a>
+            </div>
+            <div class="childAbout">
+                <a class="childText" href="{% url 'siteapp:patch_list' %}">О НАС</a>
+            </div>
+            <div class="childName">
+                <a class="childText" href="{% url 'siteapp:patch_list' %}">{{user.username}}</a>
+            </div>
+            <div class="childKey1">
+                <a class="childText" href="{% url 'siteapp:key1' %}">Получить ключ</a>
+            </div>
+            <div class="childKey2">
+                <a class="childText" href="{% url 'siteapp:key2' %}">Потерять ключ</a>
+            </div>
+            <! -- ссылки-картинки -->
+            {% if user.has_castle_key == True %}
+                <div class="childStones">
+                    <a href="{% url 'siteapp:stones' %}">
+                        <img class="img1" src="/media/stone.png" alt="" style="width: 9vw; height: 7.5vw;"/>
+                    </a>
+                </div>
+                <div class="childGreenhouse">
+                    <a href="{% url 'siteapp:greenhouse' %}">
+                        <img class="img1" src="/media/greenhouse.png" alt="" style="width: 9vw; height: 7.5vw;"/>
+                    </a>
+                </div>
+            {% endif %}
         </div>
         <input class="open" id="down-box" type="checkbox" hidden>
         <label class="btn" for="down-box"></label>
