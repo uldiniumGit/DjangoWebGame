@@ -1,1 +1,10 @@
 <img src="/media/stone.png" alt="..." >
+
+
+<li><a href="{% url 'siteapp:index' %}">Home</a></li>
+<li><a href="{% url 'siteapp:patch_list' %}">патчи</a></li>
+<li><a href="{% url 'siteapp:login' %}">Логин</a></li>
+<li><a href="{% url 'siteapp:logout' %}">Выход</a></li>
+<li><a href="{% url 'siteapp:registration' %}">Регистрация</a></li>
+<li><a href="{% url 'siteapp:registration' %}">Ключ</a></li>
+<li><a href="">{{user.username}}</a></li>

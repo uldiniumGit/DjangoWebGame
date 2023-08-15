@@ -7,7 +7,8 @@ from .forms import RegistrationForm
 from django.http import HttpResponse, HttpResponseRedirect
 
 
-class ChangeKeyView(View):
+# Ключи
+class GetKeyView(View):
     def get(self, request):
         user = request.user
         setattr(user, 'has_castle_key', True)
@@ -15,6 +16,15 @@ class ChangeKeyView(View):
         return redirect('siteapp:index')
 
 
+class LoseKeyView(View):
+    def get(self, request):
+        user = request.user
+        setattr(user, 'has_castle_key', False)
+        user.save()
+        return redirect('siteapp:index')
+
+
+# Страницы
 class UserCreateView(CreateView):
     model = GameUser
     template_name = 'siteapp/registration.html'
@@ -36,3 +46,11 @@ class PatchesListView(ListView):
 
     def get_queryset(self):
         return super(PatchesListView, self).get_queryset().order_by('-id')
+
+
+class StonesView(TemplateView):
+    template_name = 'siteapp/stones.html'
+
+
+class GreenHouseView(TemplateView):
+    template_name = 'siteapp/greenhouse.html'
