@@ -1,7 +1,7 @@
 /* Ссылки-картинки */
 .childStones {
   position: absolute;
-  top: 42.2%;
+  top: 58.0%;
   left: 52.5%;
 }
 .childGreenhouse {
@@ -65,6 +65,58 @@
 /* белый текст */
 .whiteText{
   color: white;
+}
+
+/*  ===== Выдвигающаяся верхняя панель
+*   =========================================
+*   Базовый контейнер выдвижной панели */
+/* Блок сообщения */
+.message {
+    position: absolute;
+    display: grid;
+    top: -33vw;
+    left: 0px;
+    width: 0px;
+    height: 0px;
+    transition: all 1000ms cubic-bezier(0.01,0.09,0.03,0.94);
+}
+/* Переключатель панели */
+label.btn {
+    display: block grid;
+    position: absolute;
+    right: 50%;
+    top: 0%;
+    cursor: pointer;
+    background: #2bbbad;
+    width: 2vw;
+    height: 1vw;
+    border-radius: 0 0 5px 5px;
+    color: #FFF;
+    -webkit-font-smoothing: antialiased;
+    cursor: pointer;
+    transition: all 1000ms cubic-bezier(0.01,0.09,0.03,0.94)
+}
+/* Стрелка переключателя вниз */
+label.btn:after {
+    content: '\f078';
+    text-decoration: inherit
+}
+/* Активация панели */
+.open:checked ~ .message {
+    top: 0%;
+    right: 0%;
+}
+
+.open:checked ~ label.btn {
+    top: 66.4%;
+    right: 51%;
+}
+/* Смещение контейнера контента страницы */
+.open:checked ~ .message{
+}
+/* Стрелка переключателя вверх*/
+.open:checked + label.btn:after {
+=======
   font-size: 1.2rem;
   font-weight: 100;
   font-family: Impact, "fantasy";

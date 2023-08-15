@@ -7,6 +7,12 @@
     <body>
 
         <div class="parentMap">
+            <img src="/media/MapWFramelarge.png" alt="..." style="width: 100vw; height: 49.72vw; display: block; " >
+            <div class="childStones">
+                <a href="{% url 'siteapp:patch_list' %}">
+                    <img class="img1" src="/media/stone.png" alt="" style="width: 8.9vw; height: 6.85vw;"/>
+                </a>
+
             <! -- карта -->
             <img src="/media/MapWFramelarge.png" alt="..." style="width: 100vw; height: 56.25vw; display: block; ">
 
@@ -45,6 +51,11 @@
                     </a>
                 </div>
             {% endif %}
+        </div>
+        <input class="open" id="down-box" type="checkbox" hidden>
+        <label class="btn" for="down-box"></label>
+        <div class="message">
+                <img src="/media/Bulletin.png" alt="..." style="width: 100vw; height: 33vw; display: block; ">
         </div>
     </body>
 </html>
