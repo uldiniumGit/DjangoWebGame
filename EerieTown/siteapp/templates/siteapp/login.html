@@ -5,7 +5,6 @@
         {% include 'siteapp/include_files/head.html' %}
     </head>
     <body>
-        {% include 'siteapp/include_files/navigation.html' %}
         <form method="post">
             {% csrf_token %}
             {{form.as_p}}

@@ -1,15 +1,71 @@
-
+/* Ссылки-картинки */
 .childStones {
   position: absolute;
   top: 42.2%;
   left: 52.5%;
 }
+.childGreenhouse {
+  position: absolute;
+  top: 37.75%;
+  left: 12.5%;
+}
+
+/* Карта */
 .parentMap {
   position: absolute;
   top: 0px;
   left: 0px;
   z-index: -1;
 }
+
+/* Интерфейс справа от карты */
+.childLogin{
+  position: absolute;
+  top: 5%;
+  left: 90%;
+}
+
+.childLogout{
+  position: absolute;
+  top: 12%;
+  left: 90%;
+}
+.childRegistration{
+  position: absolute;
+  top: 19%;
+  left: 90%;
+}
+.childAbout{
+  position: absolute;
+  top: 26%;
+  left: 90%;
+}
+.childName{
+  position: absolute;
+  top: 33%;
+  left: 90%;
+}
+.childKey1{
+  position: absolute;
+  top: 41%;
+  left: 90%;
+}
+.childKey2{
+  position: absolute;
+  top: 49%;
+  left: 90%;
+}
+.childText{
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-family: Impact, "fantasy";
+}
+/* белый текст */
 .whiteText{
   color: white;
+  font-size: 1.2rem;
+  font-weight: 100;
+  font-family: Impact, "fantasy";
 }
