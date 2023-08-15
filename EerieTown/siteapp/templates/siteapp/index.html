@@ -7,14 +7,8 @@
     <body>
 
         <div class="parentMap">
-            <img src="/media/MapWFramelarge.png" alt="..." style="width: 100vw; height: 49.72vw; display: block; " >
-            <div class="childStones">
-                <a href="{% url 'siteapp:patch_list' %}">
-                    <img class="img1" src="/media/stone.png" alt="" style="width: 8.9vw; height: 6.85vw;"/>
-                </a>
-
             <! -- карта -->
-            <img src="/media/MapWFramelarge.png" alt="..." style="width: 100vw; height: 56.25vw; display: block; ">
+            <img src="/media/MapWFramelarge.png" alt="..." style="height: 49.74vw; width: 100vw; display: block;">
 
             <! -- меню -->
             <div class="childLogin">
@@ -42,12 +36,12 @@
             {% if user.has_castle_key == True %}
                 <div class="childStones">
                     <a href="{% url 'siteapp:stones' %}">
-                        <img class="img1" src="/media/stone.png" alt="" style="width: 9vw; height: 7.5vw;"/>
+                        <img class="img1" src="/media/stone.png" alt="" style="width: 10vw; height: 7.1vw;"/>
                     </a>
                 </div>
                 <div class="childGreenhouse">
                     <a href="{% url 'siteapp:greenhouse' %}">
-                        <img class="img1" src="/media/greenhouse.png" alt="" style="width: 9vw; height: 7.5vw;"/>
+                        <img class="img1" src="/media/greenhouse.png" alt="" style="width: 10.3vw; height: 6.1vw;"/>
                     </a>
                 </div>
             {% endif %}
