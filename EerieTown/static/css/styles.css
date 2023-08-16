@@ -1,3 +1,7 @@
+body {
+  overflow-x: hidden; /* отключает горизонтальный скролл */
+  overflow-y: scroll; /* включает вертикальный скролл */
+}
 /* Ссылки-картинки */
 .childStones {
   position: absolute;
@@ -10,57 +14,70 @@
   left: 12.25%;g
 }
 
+/* Предметы в инвентаре */
+.key1{
+  position: absolute;
+  top: 20%;
+  left: 90%;
+  width: 3.4vw;
+}
 /* Карта */
 .parentMap {
   position: absolute;
   top: 0px;
   left: 0px;
   z-index: -1;
+  overflow: hidden;
 }
-
+}
+.hover-image-scale {
+  display: inline-block;
+  overflow: hidden; /* Скрываем всё за контуром */
+}
+.hover-image-scale img {
+  transition: 1s; /* Время эффекта */
+  display: block;
+}
+.hover-image-scale img:hover {
+  transform: scale(1.2); /* Увеличиваем масштаб */
+}
 /* Интерфейс справа от карты */
 .childLogin{
   position: absolute;
-  top: 5%;
-  left: 90%;
-}
-
-.childLogout{
-  position: absolute;
-  top: 12%;
-  left: 90%;
+  top: 1.15%;
+  left: 0%;
 }
 .childRegistration{
   position: absolute;
-  top: 19%;
-  left: 90%;
+  top: 8.75%;
+  left: 0%;
 }
 .childAbout{
   position: absolute;
-  top: 26%;
-  left: 90%;
+  top: 16.42%;
+  left: 0%;
 }
 .childName{
   position: absolute;
-  top: 33%;
-  left: 90%;
+  top: 25%;
+  left: 1%;
 }
 .childKey1{
   position: absolute;
-  top: 41%;
-  left: 90%;
+  top: 29%;
+  left: 1%;
 }
 .childKey2{
   position: absolute;
-  top: 49%;
-  left: 90%;
+  top: 34%;
+  left: 1%;
 }
 .childText{
   text-decoration: none;
-  color: black;
+  color: white;
   font-size: 1.5rem;
-  font-weight: 500;
-  font-family: Impact, "fantasy";
+  font-weight: 700;
+  font-family: serif;
 }
 /* белый текст */
 .whiteText{

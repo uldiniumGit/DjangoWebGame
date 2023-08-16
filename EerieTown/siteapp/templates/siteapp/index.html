@@ -8,30 +8,45 @@
 
         <div class="parentMap">
             <! -- карта -->
-            <img src="/media/MapWFramelarge.png" alt="..." style="height: 49.74vw; width: 100vw; display: block;">
+            <img src="/media/MapWFramelarge.png" alt="...">
 
             <! -- меню -->
-            <div class="childLogin">
-                <a class="childText" href="{% url 'siteapp:login' %}">ВХОД</a>
+            {% if request.user.is_authenticated %}
+                <div class="childLogin hover-image-scale">
+                    <a href="{% url 'siteapp:logout' %}">
+                        <img class="img1" src="/media/выход.png" alt="" style="width: 19.76vw; height: 2.97vw;"/>
+                    </a>
+                </div>
+            {% else %}
+                <div class="childLogin hover-image-scale">
+                    <a href="{% url 'siteapp:login' %}">
+                        <img class="img1" src="/media/вход.png" alt="" style="width: 19.76vw; height: 2.97vw;"/>
+                    </a>
+                </div>
+            {% endif %}
+            <div class="childRegistration hover-image-scale">
+                <a href="{% url 'siteapp:registration' %}">
+                    <img class="img1" src="/media/регистрация.png" alt="" style="width: 19.72vw; height: 2.97vw;"/>
+                </a>
             </div>
-            <div class="childLogout">
-                <a class="childText" href="{% url 'siteapp:logout' %}">ВЫХОД</a>
+            <div class="childAbout hover-image-scale">
+                <a href="{% url 'siteapp:patch_list' %}">
+                    <img class="img1" src="/media/о нас.png" alt="" style="width: 19.76vw; height: 2.97vw;"/>
+                </a>
             </div>
-            <div class="childRegistration">
-                <a class="childText" href="{% url 'siteapp:registration' %}">РЕГИСТРАЦИЯ</a>
-            </div>
-            <div class="childAbout">
-                <a class="childText" href="{% url 'siteapp:patch_list' %}">О НАС</a>
-            </div>
+            <! -- перенести (убрать) -->
             <div class="childName">
                 <a class="childText" href="{% url 'siteapp:patch_list' %}">{{user.username}}</a>
             </div>
+            <! -- убрать -->
             <div class="childKey1">
                 <a class="childText" href="{% url 'siteapp:key1' %}">Получить ключ</a>
             </div>
+            <! -- убрать -->
             <div class="childKey2">
                 <a class="childText" href="{% url 'siteapp:key2' %}">Потерять ключ</a>
             </div>
+
             <! -- ссылки-картинки -->
             {% if user.has_castle_key == True %}
                 <div class="childStones">
@@ -44,6 +59,8 @@
                         <img class="img1" src="/media/greenhouse.png" alt="" style="width: 10.3vw; height: 6.1vw;"/>
                     </a>
                 </div>
+                <! -- картинки ключи -->
+                <img class="key1" src="/media/key.png" alt=""/>
             {% endif %}
         </div>
         <input class="open" id="down-box" type="checkbox" hidden>
