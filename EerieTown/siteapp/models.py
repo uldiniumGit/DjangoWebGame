@@ -8,8 +8,11 @@ class GameUser(AbstractUser):
     email = models.EmailField(unique=True)
 
     has_forge_key = models.BooleanField(default=False)
-    has_merchant_key = models.BooleanField(default=False)
-    has_castle_key = models.BooleanField(default=False)
+    has_greenhouse_key = models.BooleanField(default=False)
+    has_stones_key = models.BooleanField(default=False)
+    has_loft_key = models.BooleanField(default=False)
+    has_kitchen_key = models.BooleanField(default=False)
+    has_fisherman_key = models.BooleanField(default=False)
 
 
 class PatchNote(models.Model):

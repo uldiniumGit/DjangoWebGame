@@ -8,7 +8,7 @@
 
         <div class="parentMap">
             <! -- карта -->
-            <img src="/media/MapWFramelarge.png" alt="..." style="height: 50.5vw; width: 100vw; display: block;">
+            <img src="/media/MapWFramelarge.png" alt="..." style="height: 63vw; width: 100vw; display: block;">
 
             <! -- меню -->
             {% if request.user.is_authenticated %}
@@ -40,23 +40,65 @@
             </div>
             <! -- убрать -->
             <div class="childKey1">
-                <a class="childText" href="{% url 'siteapp:key1' %}">Получить ключ</a>
+                <a class="childText" href="{% url 'siteapp:getmaster' %}">Получить все ключи</a>
             </div>
             <! -- убрать -->
             <div class="childKey2">
-                <a class="childText" href="{% url 'siteapp:key2' %}">Потерять ключ</a>
+                <a class="childText" href="{% url 'siteapp:losemaster' %}">Потерять все ключи</a>
+            </div>
+
+            <div class="childhallDD">
+                <a class="childText" href="{% url 'siteapp:hall' %}">Холл</a>
+            </div>
+            <div class="childkitchenDD">
+                <a class="childText" href="{% url 'siteapp:kitchen' %}">Кухня</a>
+            </div>
+            <div class="childloftDD">
+                <a class="childText" href="{% url 'siteapp:loft' %}">Чердак</a>
+            </div>
+            <div class="childfishermanDD">
+                <a class="childText" href="{% url 'siteapp:fisherman' %}">Домик рыбака</a>
+            </div>
+            <div class="childforgeDD">
+                <a class="childText" href="{% url 'siteapp:forge' %}">Кузница</a>
+            </div>
+            <div class="childstonesDD">
+                <a class="childText" href="{% url 'siteapp:stones' %}">Камни</a>
+            </div>
+            <div class="childgreenhouseDD">
+                <a class="childText" href="{% url 'siteapp:greenhouse' %}">Теплица</a>
             </div>
 
             <! -- ссылки-картинки -->
-            {% if user.has_castle_key == True %}
+            {% if user.has_forge_key == True %}
                 <div class="childStones">
                     <a href="{% url 'siteapp:stones' %}">
-                        <img class="img1" src="/media/stone.png" alt="" style="width: 10vw; height: 7.1vw;"/>
+                        <img class="img1" src="/media/stone.png" alt="" style="width: 8.5vw; height: 6.9vw;"/>
                     </a>
                 </div>
                 <div class="childGreenhouse">
                     <a href="{% url 'siteapp:greenhouse' %}">
-                        <img class="img1" src="/media/greenhouse.png" alt="" style="width: 10.3vw; height: 6.1vw;"/>
+                        <img class="img1" src="/media/greenhouse.png" alt="" style="width: 10vw; height: 6vw;"/>
+                    </a>
+                </div>
+                <div class="childfishermanhouse">
+                    <a href="{% url 'siteapp:greenhouse' %}">
+                        <img class="img1" src="/media/fishermanhouse.png" alt="" style="width: 5.5vw; height: 6.5vw;"/>
+                    </a>
+                </div>
+                <div class="childfrontdoor">
+                    <a href="{% url 'siteapp:greenhouse' %}">
+                        <img class="img1" src="/media/frontdoor.png" alt="" style="width: 7vw; height: 8vw;"/>
+                    </a>
+                </div>
+                <div class="childbacktdoor">
+                    <a href="{% url 'siteapp:greenhouse' %}">
+                        <img class="img1" src="/media/backdoor.png" alt="" style="width: 3vw; height: 4vw;"/>
+                    </a>
+                </div>
+                <div class="childforge">
+                    <a href="{% url 'siteapp:greenhouse' %}">
+                        <img class="img1" src="/media/forge.png" alt="" style="width: 10.5vw; height: 8vw;"/>
                     </a>
                 </div>
                 <! -- картинки ключи -->

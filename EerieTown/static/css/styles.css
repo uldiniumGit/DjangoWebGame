@@ -4,15 +4,34 @@ body {
 /* Ссылки-картинки */
 .childStones {
   position: absolute;
-  top: 57.8%;
-  left: 52.05%;
+  top: 48.524%;
+  left: 54.55%;
 }
 .childGreenhouse {
   position: absolute;
-  top: 53.49%;
-  left: 12.25%;g
+  top: 45%;
+  left: 17%;
 }
-
+.childfishermanhouse {
+  position: absolute;
+  top: 63%;
+  left: 60%;
+}
+.childfrontdoor {
+  position: absolute;
+  top: 33%;
+  left: 54.5%;
+}
+.childbacktdoor {
+  position: absolute;
+  top: 39%;
+  left: 66%;
+}
+.childforge {
+  position: absolute;
+  top: 34.8%;
+  left: 33%;
+}
 /* Предметы в инвентаре */
 .key1{
   position: absolute;
@@ -28,17 +47,19 @@ body {
   z-index: -1;
   overflow: hidden;
 }
-}
+/* меню эффект */
 .hover-image-scale {
   display: inline-block;
   overflow: hidden; /* Скрываем всё за контуром */
 }
 .hover-image-scale img {
-  transition: 1s; /* Время эффекта */
+  transition: 0.5s; /* Время эффекта */
   display: block;
+  opacity: .6;
 }
 .hover-image-scale img:hover {
-  transform: scale(1.2); /* Увеличиваем масштаб */
+  cursor: pointer;
+  opacity: 1;
 }
 /* Интерфейс справа от карты */
 .childLogin{
@@ -136,4 +157,41 @@ label.btn:after {
   font-size: 1.2rem;
   font-weight: 100;
   font-family: Impact, "fantasy";
+}
+
+/* ссылки для разработки */
+.childhallDD{
+  position: absolute;
+  top: 39%;
+  left: 1%;
+}
+.childkitchenDD{
+  position: absolute;
+  top: 44%;
+  left: 1%;
+}
+.childloftDD{
+  position: absolute;
+  top: 49%;
+  left: 1%;
+}
+.childfishermanDD{
+  position: absolute;
+  top: 54%;
+  left: 1%;
+}
+.childforgeDD{
+  position: absolute;
+  top: 59%;
+  left: 1%;
+}
+.childstonesDD{
+  position: absolute;
+  top: 64%;
+  left: 1%;
+}
+.childgreenhouseDD{
+  position: absolute;
+  top: 69%;
+  left: 1%;
 }
