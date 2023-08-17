@@ -117,19 +117,15 @@ body {
     width: 0px;
     height: 0px;
     transition: all 1000ms cubic-bezier(0.01,0.09,0.03,0.94);
+    z-index: 3;
 }
 /* Переключатель панели */
 label.btn {
-    display: block grid;
+    display: block;
     position: absolute;
-    right: 48%;
-    top: -1%;
+    right: 50.2vw;
+    top: -0.5vw;
     cursor: pointer;
-    width: 5vw;
-    height: 4vw;
-    background-image: url(/media/Bookmark.png);
-    background-repeat: no-repeat;
-    -webkit-font-smoothing: antialiased;
     cursor: pointer;
     transition: all 1000ms cubic-bezier(0.01,0.09,0.03,0.94)
 }
@@ -143,17 +139,13 @@ label.btn:after {
 }
 
 .open:checked ~ label.btn {
-    top: 65.4%;
+    top: 32.5vw;
 }
 /* Смещение контейнера контента страницы */
 .open:checked ~ .message{
 }
 /* Стрелка переключателя вверх*/
 .open:checked + label.btn:after {
-=======
-  font-size: 1.2rem;
-  font-weight: 100;
-  font-family: Impact, "fantasy";
 }
 
 /* ссылки для разработки */
