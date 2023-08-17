@@ -4,34 +4,34 @@ body {
 /* Ссылки-картинки */
 .childStones {
   position: absolute;
-  top: 38.524%;
-  left: 53.55%;
+  top: 38.558%;
+  left: 53.95%;
   z-index: 2;
 }
 .childGreenhouse {
   position: absolute;
-  top: 36.8%;
-  left: 14%;
+  top: 36.9%;
+  left: 14.4%;
 }
 .childfishermanhouse {
   position: absolute;
-  top: 55.1%;
-  left: 60.7%;
+  top: 54.83%;
+  left: 60.72%;
 }
 .childfrontdoor {
   position: absolute;
-  top: 24%;
-  left: 54.5%;
+  top: 25.08%;
+  left: 54.12%;
 }
 .childbacktdoor {
   position: absolute;
-  top: 31%;
-  left: 66.5%;
+  top: 31.3745%;
+  left: 66.2%;
 }
 .childforge {
   position: absolute;
-  top: 26.4%;
-  left: 33.2%;
+  top: 26.3%;
+  left: 33.35%;
 }
 /* Предметы в инвентаре */
 .key1{
