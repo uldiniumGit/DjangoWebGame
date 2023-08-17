@@ -113,7 +113,7 @@ body {
     position: absolute;
     display: grid;
     top: -33vw;
-    left: 0px;
+    left: 16vw;
     width: 0px;
     height: 0px;
     transition: all 1000ms cubic-bezier(0.01,0.09,0.03,0.94);
@@ -122,22 +122,19 @@ body {
 label.btn {
     display: block grid;
     position: absolute;
-    right: 50%;
-    top: 0%;
+    right: 48%;
+    top: -1%;
     cursor: pointer;
-    background: #2bbbad;
-    width: 2vw;
-    height: 1vw;
-    border-radius: 0 0 5px 5px;
-    color: #FFF;
+    width: 5vw;
+    height: 4vw;
+    background-image: url(/media/Bookmark.png);
+    background-repeat: no-repeat;
     -webkit-font-smoothing: antialiased;
     cursor: pointer;
     transition: all 1000ms cubic-bezier(0.01,0.09,0.03,0.94)
 }
 /* Стрелка переключателя вниз */
 label.btn:after {
-    content: '\f078';
-    text-decoration: inherit
 }
 /* Активация панели */
 .open:checked ~ .message {
@@ -146,8 +143,7 @@ label.btn:after {
 }
 
 .open:checked ~ label.btn {
-    top: 66.4%;
-    right: 51%;
+    top: 65.4%;
 }
 /* Смещение контейнера контента страницы */
 .open:checked ~ .message{
