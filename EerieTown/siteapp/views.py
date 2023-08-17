@@ -3,7 +3,7 @@ from django.urls import reverse_lazy
 from django.views.generic import TemplateView, ListView, CreateView, UpdateView, View
 from .models import PatchNote, GameUser
 from django.contrib.auth.views import LoginView, LogoutView
-from .forms import RegistrationForm
+from .forms import RegistrationForm, LoginForm
 from django.http import HttpResponse, HttpResponseRedirect
 
 
@@ -92,6 +92,7 @@ class UserCreateView(CreateView):
 
 class UserLoginView(LoginView):
     template_name = 'siteapp/login.html'
+    authentication_form = LoginForm
 
 
 class PatchesListView(ListView):

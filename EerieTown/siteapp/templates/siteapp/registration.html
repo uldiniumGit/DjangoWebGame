@@ -5,10 +5,24 @@
         {% include 'siteapp/include_files/head.html' %}
     </head>
     <body>
-        <form method="post">
-            {% csrf_token %}
-            {{form.as_p}}
-            <button type="submit">Зарегистрироваться</button>
-        </form>
+        <div class="parentMap">
+           <img src="/media/day.png"  alt="..." style="height: 58vw; width: 100vw; display: block;" >
+        </div>
+        <div class="right">
+            <form method="post" id="contactForm">
+                {% csrf_token %}
+                {% for field in form %}
+                    <p class="formText">{{field.label_tag}}</p>
+                    <p>{{field}}</p>
+                    {% for error in field.errors %}
+                        {{error}}
+                    {% endfor %}
+                {% endfor %}
+                <br>
+                <div class="bd">
+                    <button class="s-button" type ="submit" id="sendMessageButton">Зарегистрироваться</button>
+                </div>
+            </form>
+        </div>
     </body>
 </html>
