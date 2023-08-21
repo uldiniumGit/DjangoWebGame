@@ -26,4 +26,5 @@ urlpatterns = [
     path('loft', views.LoftView.as_view(), name='loft'),
     path('fisherman', views.FishermanView.as_view(), name='fisherman'),
     path('forge', views.ForgeView.as_view(), name='forge'),
+    path('square', views.SquareView.as_view(), name='square'),
 ]

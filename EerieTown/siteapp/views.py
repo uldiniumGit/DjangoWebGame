@@ -117,6 +117,10 @@ class MainView(TemplateView):
     template_name = 'siteapp/index.html'
 
 
+class SquareView(TemplateView):
+    template_name = 'siteapp/square.html'
+
+
 class StonesView(TemplateView):
     template_name = 'siteapp/stones.html'
 

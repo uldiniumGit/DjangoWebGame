@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        {% include 'siteapp/include_files/head.html' %}
+    </head>
+<body>
+    <div class="backdiv">
+        <a class="back" href="{% url 'siteapp:index' %}">Карта</a>
+    </div>
+    <div class="childKey1">
+        <a class="childText" href="{% url 'siteapp:getmaster' %}">Получить все ключи</a>
+    </div>
+    <div class="parentMap">
+       <img src="/media/square.jpg" alt="..." style="height: 59vw; width: 100vw; display: block;" >
+
+        <div class="childH">
+            <p class="back2">Выберете подозреваемого</p>
+        </div>
+        <! -- подозреваемые -->
+        <div class="childblacksmith">
+            <a href="{% url 'siteapp:stones' %}">
+                <img class="img1" src="/media/blacksmith.jpg" alt="" style="width: 15vw;"/>
+            </a>
+        </div>
+        <div class="childcook">
+            <a href="{% url 'siteapp:stones' %}">
+                <img class="img1" src="/media/cook.png" alt="" style="width: 15vw;"/>
+            </a>
+        </div>
+        <div class="childfiesherman">
+            <a href="{% url 'siteapp:stones' %}">
+                <img class="img1" src="/media/fiesherman.jpg" alt="" style="width: 15vw;"/>
+            </a>
+        </div>
+        <div class="childgardener">
+            <a href="{% url 'siteapp:stones' %}">
+                <img class="img1" src="/media/gardener.jpg" alt="" style="width: 15vw;"/>
+            </a>
+        </div>
+        <div class="childmerchant">
+            <a href="{% url 'siteapp:stones' %}">
+                <img class="img1" src="/media/merchant.png" alt="" style="width: 15vw;"/>
+            </a>
+        </div>
+</div>
+</body>
+</html>
