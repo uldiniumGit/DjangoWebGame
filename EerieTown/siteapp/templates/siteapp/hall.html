@@ -5,17 +5,30 @@
         {% include 'siteapp/include_files/head.html' %}
     </head>
 <body>
-    <a class="whiteText" href="{% url 'siteapp:index' %}">Home</a>
-    <div class="childKey1">
-        <a class="childText" href="{% url 'siteapp:getmaster' %}">Получить все ключи</a>
+    <div class="backdiv">
+        <a class="back" href="{% url 'siteapp:index' %}">Карта</a>
     </div>
+
     <div class="parentMap">
        <img src="/media/hallroom.png"  alt="..." style="height: 58vw; width: 100vw; display: block;" >
-        <div class="childhallloft">
-            <a href="{% url 'siteapp:loft' %}">
-                <img class="img1" src="/media/hallloft.png" alt="" style="width: 30.6vw; height: 30vw;"/>
+
+
+
+        {% if user.has_loft_key == True %}
+            <div class="childhallloft">
+                <a href="{% url 'siteapp:loft' %}">
+                    <img class="img1" src="/media/hallloft.png" alt="" style="width: 30.6vw; height: 30vw;"/>
+                </a>
+            </div>
+        {% endif %}
+
+        {% if user.has_loft_key != True %}
+            <a href="{% url 'siteapp:key4' %}">
+                <img class="keyroom" src="/media/keyroom.png" alt=""/>
             </a>
-        </div>
+        {% endif %}
+
+
         <div class="childhallkitchen">
             <a href="{% url 'siteapp:kitchen' %}">
                 <img class="img1" src="/media/hallkitchen.png" alt="" style="width: 12vw; height: 16vw;"/>

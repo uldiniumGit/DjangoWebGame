@@ -13,6 +13,7 @@ class GameUser(AbstractUser):
     has_loft_key = models.BooleanField(default=False)
     has_kitchen_key = models.BooleanField(default=False)
     has_fisherman_key = models.BooleanField(default=False)
+    day_two = models.BooleanField(default=False)
 
 
 class PatchNote(models.Model):

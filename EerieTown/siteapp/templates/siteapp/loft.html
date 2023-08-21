@@ -5,12 +5,21 @@
         {% include 'siteapp/include_files/head.html' %}
     </head>
 <body>
-    <a class="whiteText" href="{% url 'siteapp:index' %}">Home</a>
+    <div class="backdiv">
+        <a class="back" href="{% url 'siteapp:index' %}">Карта</a>
+    </div>
     <div class="childKey1">
         <a class="childText" href="{% url 'siteapp:getmaster' %}">Получить все ключи</a>
     </div>
     <div class="parentMap">
        <img src="/media/loftroom.png" alt="..." style="height: 59vw; width: 100vw; display: block;" >
+        {% if user.day_two != True %}
+            <div class="childbed">
+                <a href="{% url 'siteapp:daytwo' %}">
+                    <img class="" src="/media/bed.png" alt="" style="width: 46vw; height: 27.1vw;"/>
+                </a>
+            </div>
+        {% endif %}
         <div class="childlofthall">
             <a href="{% url 'siteapp:hall' %}">
                 <img class="img1" src="/media/lofthall.png" alt="" style="width: 20vw; height: 30.6vw;"/>

@@ -63,7 +63,7 @@ class GetLoftKeyView(View):
         user = request.user
         setattr(user, 'has_loft_key', True)
         user.save()
-        return redirect('siteapp:index')
+        return redirect('siteapp:hall')
 
 
 class GetKitchenKeyView(View):
@@ -80,6 +80,15 @@ class GetFishermanKeyView(View):
         setattr(user, 'has_fisherman_key', True)
         user.save()
         return redirect('siteapp:index')
+
+
+# Смена дня
+class DayTwoView(View):
+    def get(self, request):
+        user = request.user
+        setattr(user, 'day_two', True)
+        user.save()
+        return redirect('siteapp:loft')
 
 
 # Вспомогательные страницы

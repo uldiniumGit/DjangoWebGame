@@ -17,6 +17,7 @@ urlpatterns = [
     path('key6', views.GetFishermanKeyView.as_view(), name='key6'),
     path('getmaster', views.GetMasterKeyView.as_view(), name='getmaster'),
     path('losemaster', views.LoseMasterKeyView.as_view(), name='losemaster'),
+    path('daytwo', views.DayTwoView.as_view(), name='daytwo'),
     path('patches', views.PatchesListView.as_view(), name='patch_list'),
     path('stones', views.StonesView.as_view(), name='stones'),
     path('greenhouse', views.GreenHouseView.as_view(), name='greenhouse'),

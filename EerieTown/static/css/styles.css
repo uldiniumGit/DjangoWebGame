@@ -53,12 +53,35 @@ body {
   top: 19.5%;
   left: 15%;
 }
+.childbed{
+  position: absolute;
+  top: 33.9%;
+  left: 52.3%;
+}
 /* Предметы в инвентаре */
 .key1{
   position: absolute;
   top: 20%;
   left: 90%;
   width: 3.4vw;
+}
+.keystorage{
+  position: absolute;
+  top: 7%;
+  left: 86%;
+  width: 10vw;
+}
+.keyroom{
+  position: absolute;
+  top: 26%;
+  left: 90%;
+  width: 4vw;
+}
+.dagger{
+  position: absolute;
+  top: 40%;
+  left: 83%;
+  width: 17vw;
 }
 /* Карта */
 .parentMap {
@@ -123,6 +146,21 @@ body {
 /* белый текст */
 .whiteText{
   color: white;
+}
+/* вернуться на карту */
+.backdiv{
+  position: absolute;
+  top: 4%;
+  left: 3%;
+}
+.back{
+  color: white;
+  text-decoration: none;
+  opacity: 1;
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: 'Courier New', Courier, monospace;
+
 }
 /* форма для логина и регистрации */
 /* Расположение формы */
