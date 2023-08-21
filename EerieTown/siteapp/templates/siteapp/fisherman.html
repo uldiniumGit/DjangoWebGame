@@ -13,11 +13,20 @@
     </div>
     <div class="parentMap">
        <img src="/media/fishermanroom.png" alt="..." style="height: 59vw; width: 100vw; display: block;" >
+        <! -- верхняя доска -->
+        <input class="open" id="down-box" type="checkbox" hidden>
+        <label class="btn" for="down-box">
+            <img src="/media/Bookmark.png" alt="..." style="width: 2.7vw; height: 3.7vw;">
+        </label>
+        <div class="message">
+            <img src="/media/BulletinFisherman.png" alt="..." style="width: 65vw; height: 33vw;">
+        </div>
         {% if user.has_stones_key != True %}
             <a href="{% url 'siteapp:key3' %}">
                 <img class="keystorage2" src="/media/keystorage2.png" alt="" style="transform: rotate(300deg)"/>
             </a>
         {% endif %}
+
     </div>
 </body>
 </html>

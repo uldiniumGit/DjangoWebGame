@@ -12,7 +12,20 @@
     <div class="parentMap">
        <img src="/media/hallroom.png"  alt="..." style="height: 58vw; width: 100vw; display: block;" >
 
-
+        <! -- верхняя доска -->
+        <input class="open" id="down-box" type="checkbox" hidden>
+        <label class="btn" for="down-box">
+            <img src="/media/Bookmark.png" alt="..." style="width: 2.7vw; height: 3.7vw;">
+        </label>
+        {% if user.day_two == True %}
+            <div class="message">
+                <img src="/media/BulletinHall2.png" alt="..." style="width: 65vw; height: 33vw;">
+            </div>
+        {% else %}
+            <div class="message">
+                <img src="/media/BulletinHall.png" alt="..." style="width: 65vw; height: 33vw;">
+            </div>
+        {% endif %}
 
         {% if user.has_loft_key == True %}
             <div class="childhallloft">

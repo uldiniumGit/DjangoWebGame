@@ -299,7 +299,8 @@ label.btn {
     top: -0.5vw;
     cursor: pointer;
     cursor: pointer;
-    transition: all 1000ms cubic-bezier(0.01,0.09,0.03,0.94)
+    transition: all 1000ms cubic-bezier(0.01,0.09,0.03,0.94);
+    z-index:3;
 }
 /* Стрелка переключателя вниз */
 label.btn:after {

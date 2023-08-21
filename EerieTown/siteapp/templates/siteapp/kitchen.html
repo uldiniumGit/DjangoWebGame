@@ -12,6 +12,14 @@
         <a class="childText" href="{% url 'siteapp:getmaster' %}">Получить все ключи</a>
     </div>
     <div class="parentMap">
+        <! -- верхняя доска -->
+        <input class="open" id="down-box" type="checkbox" hidden>
+        <label class="btn" for="down-box">
+            <img src="/media/Bookmark.png" alt="..." style="width: 2.7vw; height: 3.7vw;">
+        </label>
+        <div class="message">
+            <img src="/media/BulletinKitchen.png" alt="..." style="width: 65vw; height: 33vw;">
+        </div>
        <img src="/media/kitchenroom.png" alt="..." style="height: 59vw; width: 100vw; display: block;" >
         <div class="childkitchenhall">
             <a href="{% url 'siteapp:hall' %}">
