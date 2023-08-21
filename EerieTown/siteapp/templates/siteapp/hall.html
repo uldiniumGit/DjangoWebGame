@@ -41,12 +41,13 @@
             </a>
         {% endif %}
 
-
-        <div class="childhallkitchen">
-            <a href="{% url 'siteapp:kitchen' %}">
-                <img class="img1" src="/media/hallkitchen.png" alt="" style="width: 12vw; height: 16vw;"/>
-            </a>
-        </div>
+        {% if user.has_stones_key == True %}
+            <div class="childhallkitchen">
+                <a href="{% url 'siteapp:kitchen' %}">
+                    <img class="img1" src="/media/hallkitchen.png" alt="" style="width: 12vw; height: 16vw;"/>
+                </a>
+            </div>
+        {% endif %}
     </div>
 </body>
 </html>

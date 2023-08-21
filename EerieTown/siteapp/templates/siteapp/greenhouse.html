@@ -8,9 +8,6 @@
     <div class="backdiv">
         <a class="back" href="{% url 'siteapp:index' %}">Карта</a>
     </div>
-    <div class="childKey1">
-        <a class="childText" href="{% url 'siteapp:getmaster' %}">Получить все ключи</a>
-    </div>
     <div class="parentMap">
        <img src="/media/greenhouseInside.png" alt="..." style="height: 59vw; width: 100vw; display: block;" >
         <! -- верхняя доска -->
@@ -18,9 +15,24 @@
         <label class="btn" for="down-box">
             <img src="/media/Bookmark.png" alt="..." style="width: 2.7vw; height: 3.7vw;">
         </label>
-        <div class="message">
-            <img src="/media/BulletinGreenhouse.png" alt="..." style="width: 65vw; height: 33vw;">
-        </div>
+        {% if user.day_three == True %}
+            <div class="message">
+                <img src="/media/BulletinGreenhouse.png" alt="..." style="width: 65vw; height: 33vw;">
+            </div>
+        {% else %}
+            <div class="message">
+                <img src="/media/BulletinGreenhouse2.png" alt="..." style="width: 65vw; height: 33vw;">
+            </div>
+        {% endif %}
+
+
+        {% if user.day_three != True %}
+            <div class="childchair">
+                <a href="{% url 'siteapp:daythree' %}">
+                    <img class="" src="/media/chair.png" alt="" style="width: 22vw; height: 26.1vw;"/>
+                </a>
+            </div>
+        {% endif %}
     </div>
 </body>
 </html>

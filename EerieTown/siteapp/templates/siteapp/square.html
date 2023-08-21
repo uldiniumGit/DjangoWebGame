@@ -5,44 +5,47 @@
         {% include 'siteapp/include_files/head.html' %}
     </head>
 <body>
-    <div class="backdiv">
-        <a class="back" href="{% url 'siteapp:index' %}">Карта</a>
-    </div>
-    <div class="childKey1">
-        <a class="childText" href="{% url 'siteapp:getmaster' %}">Получить все ключи</a>
-    </div>
     <div class="parentMap">
        <img src="/media/square.jpg" alt="..." style="height: 59vw; width: 100vw; display: block;" >
 
-        <div class="childH">
-            <p class="back2">Выберете подозреваемого</p>
-        </div>
-        <! -- подозреваемые -->
-        <div class="childblacksmith">
-            <a href="{% url 'siteapp:stones' %}">
-                <img class="img1" src="/media/blacksmith.jpg" alt="" style="width: 15vw;"/>
-            </a>
-        </div>
-        <div class="childcook">
-            <a href="{% url 'siteapp:stones' %}">
-                <img class="img1" src="/media/cook.png" alt="" style="width: 15vw;"/>
-            </a>
-        </div>
-        <div class="childfiesherman">
-            <a href="{% url 'siteapp:stones' %}">
-                <img class="img1" src="/media/fiesherman.jpg" alt="" style="width: 15vw;"/>
-            </a>
-        </div>
-        <div class="childgardener">
-            <a href="{% url 'siteapp:stones' %}">
-                <img class="img1" src="/media/gardener.jpg" alt="" style="width: 15vw;"/>
-            </a>
-        </div>
-        <div class="childmerchant">
-            <a href="{% url 'siteapp:stones' %}">
-                <img class="img1" src="/media/merchant.png" alt="" style="width: 15vw;"/>
-            </a>
-        </div>
-</div>
+        {% if user.end != True %}
+            <div class="childH">
+                <p class="back2">Выберите подозреваемого</p>
+            </div>
+            <! -- подозреваемые -->
+            <div class="childblacksmith">
+                <a href="{% url 'siteapp:end' %}">
+                    <img class="img1" src="/media/blacksmith.png" alt="" style="width: 15vw;"/>
+                </a>
+            </div>
+            <div class="childcook">
+                <a href="{% url 'siteapp:end' %}">
+                    <img class="img1" src="/media/cook.png" alt="" style="width: 15vw;"/>
+                </a>
+            </div>
+            <div class="childfiesherman">
+                <a href="{% url 'siteapp:end' %}">
+                    <img class="img1" src="/media/fisherman.png" alt="" style="width: 15vw;"/>
+                </a>
+            </div>
+            <div class="childgardener">
+                <a href="{% url 'siteapp:end' %}">
+                    <img class="img1" src="/media/gardener.png" alt="" style="width: 15vw;"/>
+                </a>
+            </div>
+            <div class="childmerchant">
+                <a href="{% url 'siteapp:end' %}">
+                    <img class="img1" src="/media/merchant.png" alt="" style="width: 15vw;"/>
+                </a>
+            </div>
+        {% else %}
+            <div class="childH2">
+                <p class="back2">Вы поймали преступника и прошли игру!</p>
+            </div>
+            <div class="childrestart">
+                <a class="childText" href="{% url 'siteapp:losemaster' %}">Новая игра.</a>
+            </div>
+        {% endif %}
+    </div>
 </body>
 </html>

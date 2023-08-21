@@ -11,7 +11,7 @@ body {
 .childgardener {
   position: absolute;
   top: 50%;
-  left: 23%;
+  left: 26%;
   z-index: 2;
 }
 .childfiesherman {
@@ -23,7 +23,7 @@ body {
 .childcook {
   position: absolute;
   top: 50%;
-  left: 63%;
+  left: 61%;
   z-index: 2;
 }
 .childblacksmith {
@@ -88,6 +88,11 @@ body {
   position: absolute;
   top: 33.9%;
   left: 52.3%;
+}
+.childchair{
+  position: absolute;
+  top: 56.5%;
+  left: 0%;
 }
 /* Предметы в инвентаре */
 .key1{
@@ -168,16 +173,30 @@ body {
   position: absolute;
   top: 25%;
   left: 1%;
+    color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: 'Courier New', Courier, monospace;
 }
 .childH{
   position: absolute;
   top: 29%;
   left: 33%;
 }
+.childH2{
+  position: absolute;
+  top: 29%;
+  left: 20%;
+}
 .childKey1{
   position: absolute;
   top: 29%;
   left: 1%;
+}
+.childrestart{
+  position: absolute;
+  top: 60%;
+  left: 46%;
 }
 .childKey2{
   position: absolute;
@@ -189,11 +208,15 @@ body {
   color: white;
   font-size: 1.5rem;
   font-weight: 700;
-  font-family: serif;
+  font-family: 'Courier New', Courier, monospace;
 }
 /* белый текст */
 .whiteText{
   color: white;
+  padding: 45px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: 'Courier New', Courier, monospace;
 }
 /* вернуться на карту */
 .backdiv{

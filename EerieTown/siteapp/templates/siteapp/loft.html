@@ -5,12 +5,6 @@
         {% include 'siteapp/include_files/head.html' %}
     </head>
 <body>
-    <div class="backdiv">
-        <a class="back" href="{% url 'siteapp:index' %}">Карта</a>
-    </div>
-    <div class="childKey1">
-        <a class="childText" href="{% url 'siteapp:getmaster' %}">Получить все ключи</a>
-    </div>
     <div class="parentMap">
         <! -- верхняя доска -->
             <input class="open" id="down-box" type="checkbox" hidden>
@@ -24,6 +18,13 @@
         {% if user.day_two != True %}
             <div class="childbed">
                 <a href="{% url 'siteapp:daytwo' %}">
+                    <img class="" src="/media/bed.png" alt="" style="width: 46vw; height: 27.1vw;"/>
+                </a>
+            </div>
+        {% endif %}
+        {% if user.has_stones_key == True %}
+            <div class="childbed">
+                <a href="{% url 'siteapp:square' %}">
                     <img class="" src="/media/bed.png" alt="" style="width: 46vw; height: 27.1vw;"/>
                 </a>
             </div>

@@ -6,31 +6,22 @@
     </head>
     <body>
         <div class="parentMap">
-            <img src="/media/night.png" alt="..." >
+            <img src="/media/about.png" alt="..." style="height: 59vw; width: 100vw; display: block;" >
         </div>
-        <a class="whiteText" href="{% url 'siteapp:index' %}">Home</a>
-        <br>
-        <br>
-        <div class="whiteText">
-            Список патчей
+        <div class="backdiv">
+            <a class="back" href="{% url 'siteapp:index' %}">К игре</a>
         </div>
         <br>
         <br>
+        <br>
+        <br>
+        <br>
+        <br>
         <div class="whiteText">
-            <ul>
-                {% for item in object_list %}
-                    <li>
-                        {{item.name}}
-                        <br>
-                        {{item.description}}
-                        <br>
-                        {{item.date}}
-                        <br>
-                        <br>
-                        <br>
-                    </li>
-                {% endfor %}
-            </ul>
+            Дипломная работа Петайкина Романа
+            <br>
+            <br>
+            И пары рисующих нейросетей
         </div>
     </body>
 </html>

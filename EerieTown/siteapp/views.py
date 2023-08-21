@@ -30,6 +30,9 @@ class LoseMasterKeyView(View):
         setattr(user, 'has_loft_key', False)
         setattr(user, 'has_kitchen_key', False)
         setattr(user, 'has_fisherman_key', False)
+        setattr(user, 'day_two', False)
+        setattr(user, 'day_three', False)
+        setattr(user, 'end', False)
         user.save()
         return redirect('siteapp:index')
 
@@ -55,7 +58,7 @@ class GetStonesKeyView(View):
         user = request.user
         setattr(user, 'has_stones_key', True)
         user.save()
-        return redirect('siteapp:index')
+        return redirect('siteapp:fisherman')
 
 
 class GetLoftKeyView(View):
@@ -89,6 +92,23 @@ class DayTwoView(View):
         setattr(user, 'day_two', True)
         user.save()
         return redirect('siteapp:loft')
+
+
+class DayThreeView(View):
+    def get(self, request):
+        user = request.user
+        setattr(user, 'day_three', True)
+        user.save()
+        return redirect('siteapp:greenhouse')
+
+
+# Конец
+class EndView(View):
+    def get(self, request):
+        user = request.user
+        setattr(user, 'end', True)
+        user.save()
+        return redirect('siteapp:square')
 
 
 # Вспомогательные страницы

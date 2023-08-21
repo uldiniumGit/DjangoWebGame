@@ -14,6 +14,8 @@ class GameUser(AbstractUser):
     has_kitchen_key = models.BooleanField(default=False)
     has_fisherman_key = models.BooleanField(default=False)
     day_two = models.BooleanField(default=False)
+    day_three = models.BooleanField(default=False)
+    end = models.BooleanField(default=False)
 
 
 class PatchNote(models.Model):

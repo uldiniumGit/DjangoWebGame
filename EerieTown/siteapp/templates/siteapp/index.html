@@ -45,43 +45,18 @@
             </div>
             <! -- перенести (убрать) -->
             <div class="childName">
-                <a class="childText" href="{% url 'siteapp:patch_list' %}">{{user.username}}</a>
-            </div>
-            <! -- убрать -->
-            <div class="childKey1">
-                <a class="childText" href="{% url 'siteapp:getmaster' %}">Получить все ключи</a>
-            </div>
-            <! -- убрать -->
-            <div class="childKey2">
-                <a class="childText" href="{% url 'siteapp:losemaster' %}">Потерять все ключи</a>
+                {{user.username}}
             </div>
 
-            <div class="childhallDD">
-                <a class="childText" href="{% url 'siteapp:hall' %}">Холл</a>
-            </div>
-            <div class="childkitchenDD">
-                <a class="childText" href="{% url 'siteapp:kitchen' %}">Кухня</a>
-            </div>
-            <div class="childloftDD">
-                <a class="childText" href="{% url 'siteapp:loft' %}">Чердак</a>
-            </div>
-            <div class="childfishermanDD">
-                <a class="childText" href="{% url 'siteapp:fisherman' %}">Домик рыбака</a>
-            </div>
-            <div class="childforgeDD">
-                <a class="childText" href="{% url 'siteapp:forge' %}">Кузница</a>
-            </div>
-            <div class="childstonesDD">
-                <a class="childText" href="{% url 'siteapp:stones' %}">Камни</a>
-            </div>
-            <div class="childgreenhouseDD">
-                <a class="childText" href="{% url 'siteapp:greenhouse' %}">Теплица</a>
-            </div>
-            <div class="childsquareDD">
-                <a class="childText" href="{% url 'siteapp:square' %}">Площадь</a>
-            </div>
 
             <! -- ссылки-картинки -->
+            {% if request.user.is_authenticated %}
+                <div class="childfrontdoor">
+                    <a href="{% url 'siteapp:hall' %}">
+                        <img class="img1" src="/media/frontdoor.png" alt="" style="width: 8.85vw; height: 10.74vw;"/>
+                    </a>
+                </div>
+            {% endif %}
             {% if user.has_stones_key == True %}
                 <div class="childStones">
                     <a href="{% url 'siteapp:stones' %}">
@@ -89,14 +64,16 @@
                     </a>
                 </div>
             {% endif %}
-            {% if user.has_greenhouse_key == True %}
+
+            {% if user.day_two == True %}
                 <div class="childGreenhouse">
                     <a href="{% url 'siteapp:greenhouse' %}">
                         <img class="img1" src="/media/greenhouse.png" alt="" style="width: 11.8vw; height: 9.65vw;"/>
                     </a>
                 </div>
             {% endif %}
-            {% if user.has_fisherman_key == True %}
+
+            {% if user.day_three == True %}
                 <div class="childfishermanhouse">
                     <a href="{% url 'siteapp:fisherman' %}">
                         <img class="img1" src="/media/fishermanhouse.png" alt="" style="width: 5.65vw; height: 7.05vw;"/>
@@ -104,30 +81,33 @@
                 </div>
             {% endif %}
 
-                <div class="childfrontdoor">
-                    <a href="{% url 'siteapp:hall' %}">
-                        <img class="img1" src="/media/frontdoor.png" alt="" style="width: 8.85vw; height: 10.74vw;"/>
-                    </a>
-                </div>
-
-            {% if user.has_kitchen_key == True %}
+            {% if user.has_stones_key == True %}
                 <div class="childbacktdoor">
                     <a href="{% url 'siteapp:kitchen' %}">
                         <img class="img1" src="/media/backdoor.png" alt="" style="width: 4.85vw; height: 4.78vw;"/>
                     </a>
                 </div>
             {% endif %}
-            {% if user.has_forge_key == True %}
+
+            {% if user.day_two == True %}
                 <div class="childforge">
                     <a href="{% url 'siteapp:forge' %}">
                         <img class="img1" src="/media/forge.png" alt="" style="width: 10.28vw; height: 9.95vw;"/>
                     </a>
                 </div>
             {% endif %}
-            {% if user.has_forge_key == True %}
-                <! -- картинки ключи -->
-                <img class="keystorage" src="/media/keystorage.png" alt=""/>
+
+            <! -- картинки ключи -->
+
+            {% if user.has_loft_key == True %}
                 <img class="keyroom" src="/media/keyroom.png" alt=""/>
+            {% endif %}
+
+            {% if user.has_stones_key == True %}
+                <img class="keystorage" src="/media/keystorage.png" alt=""/>
+            {% endif %}
+
+            {% if user.day_two == True %}
                 <img class="dagger" src="/media/dagger.png" alt=""/>
             {% endif %}
         </div>
