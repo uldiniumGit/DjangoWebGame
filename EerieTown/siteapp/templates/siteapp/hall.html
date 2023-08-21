@@ -10,7 +10,20 @@
         <a class="childText" href="{% url 'siteapp:getmaster' %}">Получить все ключи</a>
     </div>
     <div class="parentMap">
-       <img src="/media/hallroom.png"  alt="..." style="height: 58vw; width: 100vw; display: block;" >
+        <img src="/media/hallroom.png"  alt="..." style="height: 58vw; width: 100vw; display: block;" >
+    <! -- верхняя доска -->
+        <input class="open" id="down-box" type="checkbox" hidden>
+        <label class="btn" for="down-box">
+            <img src="/media/Bookmark.png" alt="..." style="width: 2.7vw; height: 3.7vw;">
+        </label>
+        {% if user.has_day_two == True %}
+            <div class="message">
+                <img src="/media/BulletinHall2.png" alt="..." style="width: 65vw; height: 33vw;">
+            </div>
+        {% else %}
+            <div class="message">
+                <img src="/media/BulletinHall.png" alt="..." style="width: 65vw; height: 33vw;">
+            </div>
     </div>
 </body>
 </html>
