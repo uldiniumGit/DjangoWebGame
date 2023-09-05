@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    {% include 'siteapp/include_files/head.html' %}
+</head>
+<body>
+
+    <div class="backdiv">
+        <a class="back" href="{% url 'siteapp:index' %}">К игре</a>
+    </div>
+    <div class="parentMap">
+        <img src="/media/about.png" alt="..." style="height: 59vw; width: 100vw; display: block;" >
+        <div class="backdiv2">
+           Для начала игры необходимо зарегистрироваться. После регистрации вам станет доступен первый журнал и первая комната.
+            А теперь попробуйте открыть журнал, нажав на кнопку в верхней части экрана.
+        </div>
+        <! -- верхняя доска -->
+        <input class="open" id="down-box" type="checkbox" hidden>
+        <label class="btn" for="down-box">
+            <img src="/media/Bookmark.png" alt="..." style="width: 2.7vw; height: 3.7vw;">
+        </label>
+        <div class="message">
+            <img src="/media/BulletinHelp.png" alt="..." style="width: 65vw; height: 33vw;">
+        </div>
+    </div>
+
+
+
+</body>
+</html>

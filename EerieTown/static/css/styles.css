@@ -169,6 +169,11 @@ body {
   top: 16.42%;
   left: 0%;
 }
+.childHelp{
+  position: absolute;
+  top: 23.92%;
+  left: 0%;
+}
 .childName{
   position: absolute;
   top: 25%;
@@ -223,6 +228,19 @@ body {
   position: absolute;
   top: 4%;
   left: 3%;
+}
+.backdiv2{
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  top: 15%;
+  margin: 10%;
+  padding: 1%;
+  color: white;
+  opacity: 1;
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: 'Courier New', Courier, monospace;
+  Z-index: 1;
 }
 .back{
   color: white;

@@ -124,12 +124,12 @@ class UserLoginView(LoginView):
     authentication_form = LoginForm
 
 
-class PatchesListView(ListView):
-    model = PatchNote
+class AboutView(TemplateView):
     template_name = 'siteapp/patch_list.html'
 
-    def get_queryset(self):
-        return super(PatchesListView, self).get_queryset().order_by('-id')
+
+class HelpView(TemplateView):
+    template_name = 'siteapp/help.html'
 
 
 # Карта и локации

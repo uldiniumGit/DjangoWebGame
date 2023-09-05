@@ -10,17 +10,21 @@
             <! -- карта -->
             <img src="/media/MapWFramelarge.png" alt="..." style="height: 63vw; width: 100vw; display: block;">
 
-            <! -- верхняя доска -->
-            <input class="open" id="down-box" type="checkbox" hidden>
-            <label class="btn" for="down-box">
-                <img src="/media/Bookmark.png" alt="..." style="width: 2.7vw; height: 3.7vw;">
-            </label>
-            <div class="message">
-                <img src="/media/Bulletin.png" alt="..." style="width: 65vw; height: 33vw;">
-            </div>
+
 
             <! -- меню -->
             {% if request.user.is_authenticated %}
+
+                <! -- верхняя доска -->
+                <input class="open" id="down-box" type="checkbox" hidden>
+                <label class="btn" for="down-box">
+                    <img src="/media/Bookmark.png" alt="..." style="width: 2.7vw; height: 3.7vw;">
+                </label>
+                <div class="message">
+                    <img src="/media/Bulletin.png" alt="..." style="width: 65vw; height: 33vw;">
+                </div>
+
+
                 <div class="childLogin hover-image-scale">
                     <a href="{% url 'siteapp:logout' %}">
                         <img class="img1" src="/media/выход.png" alt="" style="width: 19.76vw; height: 2.97vw;"/>
@@ -43,10 +47,12 @@
                     <img class="img1" src="/media/о нас.png" alt="" style="width: 19.76vw; height: 2.97vw;"/>
                 </a>
             </div>
-            <! -- перенести (убрать) -->
-            <div class="childName">
-                {{user.username}}
+            <div class="childHelp hover-image-scale">
+                <a href="{% url 'siteapp:help' %}">
+                    <img class="img1" src="/media/помощь.png" alt="" style="width: 19.76vw; height: 2.97vw;"/>
+                </a>
             </div>
+
 
 
             <! -- ссылки-картинки -->
