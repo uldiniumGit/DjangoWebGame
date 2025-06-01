@@ -1,50 +1,51 @@
 <!DOCTYPE html>
 {% load static %}
-<html lang="en">
-    <head>
-        {% include 'siteapp/include_files/head.html' %}
-    </head>
+<html lang="ru">
+<head>
+    {% include 'siteapp/include_files/head.html' %}
+</head>
 <body>
     <div class="backdiv">
         <a class="back" href="{% url 'siteapp:index' %}">Карта</a>
     </div>
 
     <div class="parentMap">
-       <img src="/media/hallroom.png"  alt="..." style="height: 58vw; width: 100vw; display: block;" >
+        <img src="/media/hallroom.png" alt="Зал" style="height: 58vw; width: 100vw; display: block;">
 
-        <! -- верхняя доска -->
+        <!-- Верхняя доска -->
         <input class="open" id="down-box" type="checkbox" hidden>
         <label class="btn" for="down-box">
-            <img src="/media/Bookmark.png" alt="..." style="width: 2.7vw; height: 3.7vw;">
+            <img src="/media/Bookmark.png" alt="Закладка" style="width: 2.7vw; height: 3.7vw;">
         </label>
+
         {% if user.day_two == True %}
             <div class="message">
-                <img src="/media/BulletinHall2.png" alt="..." style="width: 65vw; height: 33vw;">
+                <img src="/media/BulletinHall2.png" alt="Объявления, день 2" style="width: 65vw; height: 33vw;">
             </div>
         {% else %}
             <div class="message">
-                <img src="/media/BulletinHall.png" alt="..." style="width: 65vw; height: 33vw;">
+                <img src="/media/BulletinHall.png" alt="Объявления, день 1" style="width: 65vw; height: 33vw;">
             </div>
         {% endif %}
 
         {% if user.has_loft_key == True %}
             <div class="childhallloft">
                 <a href="{% url 'siteapp:loft' %}">
-                    <img class="img1" src="/media/hallloft.png" alt="" style="width: 30.6vw; height: 30vw;"/>
+                    <img class="img1" src="/media/hallloft.png" alt="Доступ на чердак" style="width: 30.6vw; height: 30vw;">
                 </a>
             </div>
         {% endif %}
 
         {% if user.has_loft_key != True %}
             <a href="{% url 'siteapp:key4' %}">
-                <img class="keyroom2" src="/media/keyroom2.png" alt="" style="transform: rotate(60deg)"/>
+                <img class="keyroom2" src="/media/keyroom2.png" alt="Ключ к чердаку" style="transform: rotate(60deg);">
             </a>
         {% endif %}
 
         {% if user.has_stones_key == True %}
             <div class="childhallkitchen">
                 <a href="{% url 'siteapp:kitchen' %}">
-                    <img class="img1" src="/media/hallkitchen.png" alt="" style="width: 12vw; height: 16vw;"/>
+                    <img class="img1" src="/media/hallkitchen.png" alt="Дверь на кухню" style="width: 12vw; height: 16vw;">
                 </a>
             </div>
         {% endif %}
