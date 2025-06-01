@@ -1,39 +1,45 @@
 <!DOCTYPE html>
 {% load static %}
-<html lang="en">
-    <head>
-        {% include 'siteapp/include_files/head.html' %}
-    </head>
+<html lang="ru">
+<head>
+    {% include 'siteapp/include_files/head.html' %}
+</head>
 <body>
     <div class="parentMap">
-        <! -- верхняя доска -->
-            <input class="open" id="down-box" type="checkbox" hidden>
-            <label class="btn" for="down-box">
-                <img src="/media/Bookmark.png" alt="..." style="width: 2.7vw; height: 3.7vw;">
-            </label>
-            <div class="message">
-                <img src="/media/BulletinLoft.png" alt="..." style="width: 65vw; height: 33vw;">
-            </div>
-       <img src="/media/loftroom.png" alt="..." style="height: 59vw; width: 100vw; display: block;" >
-        {% if user.day_two != True %}
+
+        <!-- верхняя доска -->
+        <input class="open" id="down-box" type="checkbox" hidden>
+        <label class="btn" for="down-box">
+            <img src="/media/Bookmark.png" alt="Закладка" style="width: 2.7vw; height: 3.7vw;">
+        </label>
+        <div class="message">
+            <img src="/media/BulletinLoft.png" alt="Сообщение на доске" style="width: 65vw; height: 33vw;">
+        </div>
+
+        <img src="/media/loftroom.png" alt="Комната на чердаке" style="height: 59vw; width: 100vw; display: block;">
+
+        {% if not user.day_two %}
             <div class="childbed">
                 <a href="{% url 'siteapp:daytwo' %}">
-                    <img class="" src="/media/bed.png" alt="" style="width: 46vw; height: 27.1vw;"/>
+                    <img src="/media/bed.png" alt="Кровать - начать второй день" style="width: 46vw; height: 27.1vw;">
                 </a>
             </div>
         {% endif %}
-        {% if user.has_stones_key == True %}
+
+        {% if user.has_stones_key %}
             <div class="childbed">
                 <a href="{% url 'siteapp:square' %}">
-                    <img class="" src="/media/bed.png" alt="" style="width: 46vw; height: 27.1vw;"/>
+                    <img src="/media/bed.png" alt="Кровать - выход к площади" style="width: 46vw; height: 27.1vw;">
                 </a>
             </div>
         {% endif %}
+
         <div class="childlofthall">
             <a href="{% url 'siteapp:hall' %}">
-                <img class="img1" src="/media/lofthall.png" alt="" style="width: 20vw; height: 30.6vw;"/>
+                <img class="img1" src="/media/lofthall.png" alt="Выход в холл" style="width: 20vw; height: 30.6vw;">
             </a>
         </div>
+
     </div>
 </body>
 </html>
