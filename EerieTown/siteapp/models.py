@@ -1,9 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 
-# Create your models here.
-
-
 class GameUser(AbstractUser):
     email = models.EmailField(unique=True)
 
@@ -19,12 +16,9 @@ class GameUser(AbstractUser):
 
 
 class PatchNote(models.Model):
-
-    def __str__(self):
-        return self.name
-
-    name = models.CharField(max_length=16, unique=True)
+    name = models.CharField(max_length=50, unique=True)  # увеличил длину с 16 до 50
     description = models.TextField(blank=True)
     date = models.DateTimeField()
 
-
+    def __str__(self):
+        return self.name
