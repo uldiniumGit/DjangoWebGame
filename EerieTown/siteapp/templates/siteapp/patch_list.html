@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 {% load static %}
-<html lang="en">
-    <head>
-        {% include 'siteapp/include_files/head.html' %}
-    </head>
-    <body>
-        <div class="parentMap">
-            <img src="/media/about.png" alt="..." style="height: 59vw; width: 100vw; display: block;" >
-            <div class="backdiv2">
-                Привет! Я Петайкин Роман и это моя дипломная работа.
-                Перед вами сайт с игрой в жанре квест, написанный на джанго.
-                Все изображения и тексты были сгенерированны с помощью нейросетей.
-            </div>
+<html lang="ru">
+<head>
+    {% include 'siteapp/include_files/head.html' %}
+</head>
+<body>
+    <div class="parentMap">
+        <img src="/media/about.png" alt="О проекте" style="height: 59vw; width: 100vw; display: block;">
+        <div class="backdiv2">
+            <p>Привет! Я Петайкин Роман, и это моя дипломная работа.</p>
+            <p>Перед вами сайт с игрой в жанре квест, написанный на Django.</p>
+            <p>Все изображения и тексты были сгенерированы с помощью нейросетей.</p>
         </div>
-        <div class="backdiv">
-            <a class="back" href="{% url 'siteapp:index' %}">К игре</a>
-        </div>
-    </body>
+    </div>
+    <div class="backdiv">
+        <a class="back" href="{% url 'siteapp:index' %}">К игре</a>
+    </div>
+</body>
 </html>
