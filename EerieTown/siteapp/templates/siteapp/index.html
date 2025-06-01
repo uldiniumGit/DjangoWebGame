@@ -1,124 +1,120 @@
 <!DOCTYPE html>
 {% load static %}
-<html lang="en">
-    <head>
-        {% include 'siteapp/include_files/head.html' %}
-    </head>
-    <body>
+<html lang="ru">
+<head>
+    {% include 'siteapp/include_files/head.html' %}
+</head>
+<body>
 
-        <div class="parentMap">
-            <! -- карта -->
-            <img src="/media/MapWFramelarge.png" alt="..." style="height: 63vw; width: 100vw; display: block;">
+    <div class="parentMap">
+        <!-- Карта -->
+        <img src="/media/MapWFramelarge.png" alt="Карта мира" style="height: 63vw; width: 100vw; display: block;">
 
+        <!-- Меню -->
+        {% if request.user.is_authenticated %}
 
-
-            <! -- меню -->
-            {% if request.user.is_authenticated %}
-
-                <! -- верхняя доска -->
-                <input class="open" id="down-box" type="checkbox" hidden>
-                <label class="btn" for="down-box">
-                    <img src="/media/Bookmark.png" alt="..." style="width: 2.7vw; height: 3.7vw;">
-                </label>
-                <div class="message">
-                    <img src="/media/Bulletin.png" alt="..." style="width: 65vw; height: 33vw;">
-                </div>
-
-
-                <div class="childLogin hover-image-scale">
-                    <a href="{% url 'siteapp:logout' %}">
-                        <img class="img1" src="/media/выход.png" alt="" style="width: 19.76vw; height: 2.97vw;"/>
-                    </a>
-                </div>
-            {% else %}
-                <div class="childLogin hover-image-scale">
-                    <a href="{% url 'siteapp:login' %}">
-                        <img class="img1" src="/media/вход.png" alt="" style="width: 19.76vw; height: 2.97vw;"/>
-                    </a>
-                </div>
-            {% endif %}
-            <div class="childRegistration hover-image-scale">
-                <a href="{% url 'siteapp:registration' %}">
-                    <img class="img1" src="/media/регистрация.png" alt="" style="width: 19.72vw; height: 2.97vw;"/>
-                </a>
-            </div>
-            <div class="childAbout hover-image-scale">
-                <a href="{% url 'siteapp:patch_list' %}">
-                    <img class="img1" src="/media/о нас.png" alt="" style="width: 19.76vw; height: 2.97vw;"/>
-                </a>
-            </div>
-            <div class="childHelp hover-image-scale">
-                <a href="{% url 'siteapp:help' %}">
-                    <img class="img1" src="/media/помощь.png" alt="" style="width: 19.76vw; height: 2.97vw;"/>
-                </a>
+            <!-- Верхняя доска -->
+            <input class="open" id="down-box" type="checkbox" hidden>
+            <label class="btn" for="down-box">
+                <img src="/media/Bookmark.png" alt="Закладка" style="width: 2.7vw; height: 3.7vw;">
+            </label>
+            <div class="message">
+                <img src="/media/Bulletin.png" alt="Доска объявлений" style="width: 65vw; height: 33vw;">
             </div>
 
+            <div class="childLogin hover-image-scale">
+                <a href="{% url 'siteapp:logout' %}">
+                    <img class="img1" src="/media/выход.png" alt="Выход" style="width: 19.76vw; height: 2.97vw;">
+                </a>
+            </div>
+        {% else %}
+            <div class="childLogin hover-image-scale">
+                <a href="{% url 'siteapp:login' %}">
+                    <img class="img1" src="/media/вход.png" alt="Вход" style="width: 19.76vw; height: 2.97vw;">
+                </a>
+            </div>
+        {% endif %}
 
-
-            <! -- ссылки-картинки -->
-            {% if request.user.is_authenticated %}
-                <div class="childfrontdoor">
-                    <a href="{% url 'siteapp:hall' %}">
-                        <img class="img1" src="/media/frontdoor.png" alt="" style="width: 8.85vw; height: 10.74vw;"/>
-                    </a>
-                </div>
-            {% endif %}
-            {% if user.has_stones_key == True %}
-                <div class="childStones">
-                    <a href="{% url 'siteapp:stones' %}">
-                        <img class="img1" src="/media/stone.png" alt="" style="width: 10.58vw; height: 10.37vw;"/>
-                    </a>
-                </div>
-            {% endif %}
-
-            {% if user.day_two == True %}
-                <div class="childGreenhouse">
-                    <a href="{% url 'siteapp:greenhouse' %}">
-                        <img class="img1" src="/media/greenhouse.png" alt="" style="width: 11.8vw; height: 9.65vw;"/>
-                    </a>
-                </div>
-            {% endif %}
-
-            {% if user.day_three == True %}
-                <div class="childfishermanhouse">
-                    <a href="{% url 'siteapp:fisherman' %}">
-                        <img class="img1" src="/media/fishermanhouse.png" alt="" style="width: 5.65vw; height: 7.05vw;"/>
-                    </a>
-                </div>
-            {% endif %}
-
-            {% if user.has_stones_key == True %}
-                <div class="childbacktdoor">
-                    <a href="{% url 'siteapp:kitchen' %}">
-                        <img class="img1" src="/media/backdoor.png" alt="" style="width: 4.85vw; height: 4.78vw;"/>
-                    </a>
-                </div>
-            {% endif %}
-
-            {% if user.day_two == True %}
-                <div class="childforge">
-                    <a href="{% url 'siteapp:forge' %}">
-                        <img class="img1" src="/media/forge.png" alt="" style="width: 10.28vw; height: 9.95vw;"/>
-                    </a>
-                </div>
-            {% endif %}
-
-            <! -- картинки ключи -->
-
-            {% if user.has_loft_key == True %}
-                <img class="keyroom" src="/media/keyroom.png" alt=""/>
-            {% endif %}
-
-            {% if user.has_stones_key == True %}
-                <img class="keystorage" src="/media/keystorage.png" alt=""/>
-            {% endif %}
-
-            {% if user.day_two == True %}
-                <img class="dagger" src="/media/dagger.png" alt=""/>
-            {% endif %}
+        <div class="childRegistration hover-image-scale">
+            <a href="{% url 'siteapp:registration' %}">
+                <img class="img1" src="/media/регистрация.png" alt="Регистрация" style="width: 19.72vw; height: 2.97vw;">
+            </a>
+        </div>
+        <div class="childAbout hover-image-scale">
+            <a href="{% url 'siteapp:patch_list' %}">
+                <img class="img1" src="/media/о нас.png" alt="О нас" style="width: 19.76vw; height: 2.97vw;">
+            </a>
+        </div>
+        <div class="childHelp hover-image-scale">
+            <a href="{% url 'siteapp:help' %}">
+                <img class="img1" src="/media/помощь.png" alt="Помощь" style="width: 19.76vw; height: 2.97vw;">
+            </a>
         </div>
 
-    </body>
+        <!-- Ссылки-картинки -->
+        {% if request.user.is_authenticated %}
+            <div class="childfrontdoor">
+                <a href="{% url 'siteapp:hall' %}">
+                    <img class="img1" src="/media/frontdoor.png" alt="Вход в дом" style="width: 8.85vw; height: 10.74vw;">
+                </a>
+            </div>
+        {% endif %}
+
+        {% if user.has_stones_key %}
+            <div class="childStones">
+                <a href="{% url 'siteapp:stones' %}">
+                    <img class="img1" src="/media/stone.png" alt="Путь к камням" style="width: 10.58vw; height: 10.37vw;">
+                </a>
+            </div>
+        {% endif %}
+
+        {% if user.day_two %}
+            <div class="childGreenhouse">
+                <a href="{% url 'siteapp:greenhouse' %}">
+                    <img class="img1" src="/media/greenhouse.png" alt="Теплица" style="width: 11.8vw; height: 9.65vw;">
+                </a>
+            </div>
+        {% endif %}
+
+        {% if user.day_three %}
+            <div class="childfishermanhouse">
+                <a href="{% url 'siteapp:fisherman' %}">
+                    <img class="img1" src="/media/fishermanhouse.png" alt="Дом рыбака" style="width: 5.65vw; height: 7.05vw;">
+                </a>
+            </div>
+        {% endif %}
+
+        {% if user.has_stones_key %}
+            <div class="childbacktdoor">
+                <a href="{% url 'siteapp:kitchen' %}">
+                    <img class="img1" src="/media/backdoor.png" alt="Черный вход" style="width: 4.85vw; height: 4.78vw;">
+                </a>
+            </div>
+        {% endif %}
+
+        {% if user.day_two %}
+            <div class="childforge">
+                <a href="{% url 'siteapp:forge' %}">
+                    <img class="img1" src="/media/forge.png" alt="Кузница" style="width: 10.28vw; height: 9.95vw;">
+                </a>
+            </div>
+        {% endif %}
+
+        <!-- Картинки-ключи -->
+        {% if user.has_loft_key %}
+            <img class="keyroom" src="/media/keyroom.png" alt="Ключ от чердака">
+        {% endif %}
+
+        {% if user.has_stones_key %}
+            <img class="keystorage" src="/media/keystorage.png" alt="Ключ от склада">
+        {% endif %}
+
+        {% if user.day_two %}
+            <img class="dagger" src="/media/dagger.png" alt="Кинжал">
+        {% endif %}
+    </div>
+
+</body>
 </html>
 
 
