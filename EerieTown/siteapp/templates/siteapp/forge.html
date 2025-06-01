@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 {% load static %}
-<html lang="en">
-    <head>
-        {% include 'siteapp/include_files/head.html' %}
-    </head>
+<html lang="ru">
+<head>
+    {% include 'siteapp/include_files/head.html' %}
+</head>
 <body>
     <div class="backdiv">
         <a class="back" href="{% url 'siteapp:index' %}">Карта</a>
     </div>
+
     <div class="parentMap">
-       <img src="/media/forgeroom.png" alt="..." style="height: 59vw; width: 100vw; display: block;" >
-        <! -- верхняя доска -->
+        <img src="/media/forgeroom.png" alt="Комната кузницы" style="height: 59vw; width: 100vw; display: block;">
+
+        <!-- Верхняя доска -->
         <input class="open" id="down-box" type="checkbox" hidden>
         <label class="btn" for="down-box">
-            <img src="/media/Bookmark.png" alt="..." style="width: 2.7vw; height: 3.7vw;">
+            <img src="/media/Bookmark.png" alt="Открыть журнал" style="width: 2.7vw; height: 3.7vw;">
         </label>
         <div class="message">
-            <img src="/media/BulletinForge.png" alt="..." style="width: 65vw; height: 33vw;">
+            <img src="/media/BulletinForge.png" alt="Объявление в кузнице" style="width: 65vw; height: 33vw;">
         </div>
     </div>
 </body>
