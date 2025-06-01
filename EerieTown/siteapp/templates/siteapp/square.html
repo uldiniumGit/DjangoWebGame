@@ -1,41 +1,41 @@
 <!DOCTYPE html>
 {% load static %}
-<html lang="en">
-    <head>
-        {% include 'siteapp/include_files/head.html' %}
-    </head>
+<html lang="ru">
+<head>
+    {% include 'siteapp/include_files/head.html' %}
+</head>
 <body>
     <div class="parentMap">
-       <img src="/media/square.jpg" alt="..." style="height: 59vw; width: 100vw; display: block;" >
+        <img src="/media/square.jpg" alt="Площадь" style="height: 59vw; width: 100vw; display: block;">
 
         {% if user.end != True %}
             <div class="childH">
                 <p class="back2">Выберите подозреваемого</p>
             </div>
-            <! -- подозреваемые -->
+            <!-- подозреваемые -->
             <div class="childblacksmith">
                 <a href="{% url 'siteapp:end' %}">
-                    <img class="img1" src="/media/blacksmith.png" alt="" style="width: 15vw;"/>
+                    <img class="img1" src="/media/blacksmith.png" alt="Кузнец" style="width: 15vw;">
                 </a>
             </div>
             <div class="childcook">
                 <a href="{% url 'siteapp:end' %}">
-                    <img class="img1" src="/media/cook.png" alt="" style="width: 15vw;"/>
+                    <img class="img1" src="/media/cook.png" alt="Повар" style="width: 15vw;">
                 </a>
             </div>
-            <div class="childfiesherman">
+            <div class="childfisherman">
                 <a href="{% url 'siteapp:end' %}">
-                    <img class="img1" src="/media/fisherman.png" alt="" style="width: 15vw;"/>
+                    <img class="img1" src="/media/fisherman.png" alt="Рыбак" style="width: 15vw;">
                 </a>
             </div>
             <div class="childgardener">
                 <a href="{% url 'siteapp:end' %}">
-                    <img class="img1" src="/media/gardener.png" alt="" style="width: 15vw;"/>
+                    <img class="img1" src="/media/gardener.png" alt="Садовник" style="width: 15vw;">
                 </a>
             </div>
             <div class="childmerchant">
                 <a href="{% url 'siteapp:end' %}">
-                    <img class="img1" src="/media/merchant.png" alt="" style="width: 15vw;"/>
+                    <img class="img1" src="/media/merchant.png" alt="Торговец" style="width: 15vw;">
                 </a>
             </div>
         {% else %}
