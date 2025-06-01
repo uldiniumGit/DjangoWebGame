@@ -1,28 +1,32 @@
 <!DOCTYPE html>
 {% load static %}
-<html lang="en">
-    <head>
-        {% include 'siteapp/include_files/head.html' %}
-    </head>
+<html lang="ru">
+<head>
+    {% include 'siteapp/include_files/head.html' %}
+</head>
 <body>
     <div class="backdiv">
         <a class="back" href="{% url 'siteapp:index' %}">Карта</a>
     </div>
     <div class="parentMap">
-        <! -- верхняя доска -->
+
+        <!-- верхняя доска -->
         <input class="open" id="down-box" type="checkbox" hidden>
         <label class="btn" for="down-box">
-            <img src="/media/Bookmark.png" alt="..." style="width: 2.7vw; height: 3.7vw;">
+            <img src="/media/Bookmark.png" alt="Закладка" style="width: 2.7vw; height: 3.7vw;">
         </label>
         <div class="message">
-            <img src="/media/BulletinKitchen.png" alt="..." style="width: 65vw; height: 33vw;">
+            <img src="/media/BulletinKitchen.png" alt="Сообщение на доске кухни" style="width: 65vw; height: 33vw;">
         </div>
-       <img src="/media/kitchenroom.png" alt="..." style="height: 59vw; width: 100vw; display: block;" >
+
+        <img src="/media/kitchenroom.png" alt="Кухня" style="height: 59vw; width: 100vw; display: block;">
+
         <div class="childkitchenhall">
             <a href="{% url 'siteapp:hall' %}">
-                <img class="img1" src="/media/kitchenhall.png" alt="" style="width: 9.58vw; height: 50.37vw;"/>
+                <img class="img1" src="/media/kitchenhall.png" alt="Выход в холл с кухни" style="width: 9.58vw; height: 50.37vw;">
             </a>
         </div>
+
     </div>
 </body>
 </html>
