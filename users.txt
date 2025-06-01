@@ -1,4 +1,0 @@
-superuser
-email: uldinium@yandex.ru
-Username: admin
-password: EerieTown
