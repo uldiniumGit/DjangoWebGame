@@ -1,35 +1,37 @@
 <!DOCTYPE html>
 {% load static %}
-<html lang="en">
-    <head>
-        {% include 'siteapp/include_files/head.html' %}
-    </head>
+<html lang="ru">
+<head>
+    {% include 'siteapp/include_files/head.html' %}
+</head>
 <body>
     <div class="backdiv">
         <a class="back" href="{% url 'siteapp:index' %}">Карта</a>
     </div>
+
     <div class="parentMap">
-       <img src="/media/greenhouseInside.png" alt="..." style="height: 59vw; width: 100vw; display: block;" >
-        <! -- верхняя доска -->
+        <img src="/media/greenhouseInside.png" alt="Внутри теплицы" style="height: 59vw; width: 100vw; display: block;">
+
+        <!-- Верхняя доска -->
         <input class="open" id="down-box" type="checkbox" hidden>
         <label class="btn" for="down-box">
-            <img src="/media/Bookmark.png" alt="..." style="width: 2.7vw; height: 3.7vw;">
+            <img src="/media/Bookmark.png" alt="Закладка" style="width: 2.7vw; height: 3.7vw;">
         </label>
+
         {% if user.day_three == True %}
             <div class="message">
-                <img src="/media/BulletinGreenhouse.png" alt="..." style="width: 65vw; height: 33vw;">
+                <img src="/media/BulletinGreenhouse.png" alt="Объявление для дня 3" style="width: 65vw; height: 33vw;">
             </div>
         {% else %}
             <div class="message">
-                <img src="/media/BulletinGreenhouse2.png" alt="..." style="width: 65vw; height: 33vw;">
+                <img src="/media/BulletinGreenhouse2.png" alt="Объявление до дня 3" style="width: 65vw; height: 33vw;">
             </div>
         {% endif %}
-
 
         {% if user.day_three != True %}
             <div class="childchair">
                 <a href="{% url 'siteapp:daythree' %}">
-                    <img class="" src="/media/chair.png" alt="" style="width: 22vw; height: 26.1vw;"/>
+                    <img src="/media/chair.png" alt="Стул с предметом" style="width: 22vw; height: 26.1vw;">
                 </a>
             </div>
         {% endif %}
